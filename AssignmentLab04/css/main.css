@@ -143,7 +143,14 @@ header {
     /* border: 1px solid #ccc; helper style to view elements while coding */
 }
 
+.column {
+    /* background-color: black; */
+    /* margin: 1rem; */
+}
 
+.heading {
+    text-align: center;
+}
 
 /* main nav mobile first */
 
@@ -151,32 +158,79 @@ header {
 /* Small only */
 
 @media screen and (max-width: 39.9375em) {
+    .s-hide {
+        display: none;
+    }
+
 }
 
 
 /* Medium and up */
 
 @media screen and (min-width: 40em) {
-
     /* medium and up main navigation */
+    .row {
+        display: grid;
+        width: 85vw;
+        max-width: 70rem;
+        margin: 0 auto;
+    }
+    .m-col-2 {
+        grid-template-columns: 1fr 1fr;
+    }
+    .m-col-3 {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .m-col-4 {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .m-col-5 {
+        grid-template-columns: repeat(5, 1fr);
+    }
+    .row-span {
+        grid-column-start: 1;
+        grid-column-end: -1;
+    }
 }
 
 
 /* Medium only */
 
 @media screen and (min-width: 40em) and (max-width: 63.9375em) {
+    .m-hide {
+        display: none;
+    }
 }
 
 
 /* Large and up */
 
 @media screen and (min-width: 64em) {
+    .m-col-2 {
+        grid-template-columns: 1fr 1fr;
+    }
+    .m-col-3 {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .m-col-4 {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .m-col-5 {
+        grid-template-columns: repeat(5, 1fr);
+    }
+    .m-col-6 {
+        grid-template-columns: repeat(6, 1fr);
+    }
 }
 
 
 /* Large only */
 
-@media screen and (min-width: 64em) and (max-width: 74.9375em) {}
+@media screen and (min-width: 64em) and (max-width: 74.9375em) {
+    .l-hide {
+        display: none;
+    }
+}
 
 
 /* ==========================================================================
